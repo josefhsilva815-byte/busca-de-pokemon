@@ -14,7 +14,7 @@ Uma aplicação web simples e intuitiva para pesquisar Pokémon utilizando a **P
   * Attack (ATK)
   * Special Defense (SP. DEF)
   * Special Attack (SP. ATK)
-  * Speed
+  * Speed (SPD)
 * Exibição do peso.
 * Exibição da altura.
 * Exibição das habilidades do Pokémon.
