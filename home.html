@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon - Busca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sansita+Swashed:wght@300..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./assets/pokeball.png">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/imgTitulo.png" alt="imagem do cabeçalho: Pokemon 1999">
+        <nav class="navegador">
+            <div class="procurar-pokemon">
+                <label for="busca">Pesquisar por nome</label>
+                <input type="text" name="busca" id="busca" autocomplete="off" placeholder="Nome do Pokémon">
+            </div>
+            <img draggable="false" src="./assets/pokeball.png" alt="imagem de uma pokebola" onclick="buscarPokemon()">
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <section class="card-header">
+                <div id="nome">Nome</div>
+                <div id="tipo">Tipo</div>
+            </section>
+            <section class="img-content">
+                <img id="img-pokemon" src="./assets/pokeball.png" alt="imagem do pokemon">
+            </section>
+            <section class="status">
+                <p class="descricao">Status</p>
+                <span class="HP">HP</span>
+                <span class="ATK">ATK</span>
+                <span class="DEF">DEF</span>
+                <span class="SP_DEF">SP. DEF</span>
+                <span class="SP_ATK">SP. ATK</span>
+                <span class="SPD">SPD</span>
+                <!--
+                    HP:
+                    ATK:
+                    DEF:
+                    SPC-ATK
+                    SPC-DEF
+                    SPD:
+                -->
+                <span id="hp">--</span>
+                <span id="atk">---</span>
+                <span id="def">---</span>
+                <span id="sp_def">------</span>
+                <span id="sp_atk">------</span>
+                <span id="spd">---</span>
+            </section>
+            <section class="atributos">
+                <p class="descricao">Atributos</p>
+                <p id="peso">X</span></p>
+                <p id="altura">X</span></p>
+            </section>
+            <section class="habilidades">
+                <p class="descricao">Habilidades</p>
+                <p class="hld-1">skill - 1</p>
+                <p class="hld-2">skill - 2</p>
+                <p class="hld-3">skill - 3</p>
+            </section>
+        </div>
+        <div id="pokemon-desconhecido" class="hidden">
+            <p>Pokémon não encontrado!</p>
+            <img src="./assets/pokemon-deconhecido.png" alt="Pokémon não encontrado">
+        </div>
+    </main>
+
+    <footer>
+        <img src="./assets/imgFooterEsq.png" alt="imagem dos pokemons iniciais">
+        <img src="./assets/imgFooterDir.png" alt="imagem dos pokemons iniciais">
+    </footer>
+
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+
+</html>

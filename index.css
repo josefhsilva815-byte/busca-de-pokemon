@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+    color: rgba(0, 0, 150, 0.8);
+    font-weight: bold;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 1fr 80px;
+}
+
+
+/*  Cabeçalho:
+*/
+header {
+    background-color:rgb(255, 255, 0, 0.5);
+    border: 10px ridge royalblue;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.navegador {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: fit-content;
+    width: 400px;
+}
+
+.procurar-pokemon {
+    height: 100%;
+    width: 100%;
+}
+
+.procurar-pokemon label {
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+#busca {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    outline: none;
+    padding: 0 8px;
+    text-align: center;
+    user-select: text;
+}
+
+.navegador img {
+    border-radius: 50%;
+    align-self: flex-end;
+    object-fit: contain;
+    cursor: pointer;
+    width: 60px;
+    transition: 0.2s;
+}
+
+.navegador img:hover {
+    box-shadow: 0 0 16px 4px rgba(128, 128, 128, 0.25);
+}
+
+
+
+/*  Corpo do Site: 
+*/
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    margin: auto auto;
+    border: 10px solid rgb(255, 217, 0);
+    border-radius: 15px;
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding: 0 5px 0 10px;
+    text-align: start;
+}
+
+.hidden {
+    display: none;
+}
+
+#nome {
+    width: fit-content;
+}
+
+#tipo {
+    width: fit-content;
+    display: flex;
+    gap: 6px;
+}
+
+#tipo span {
+    border-radius: 3px;
+    padding: 0 3px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+.img-content {
+    width: 100%;
+    height: 130px;
+    display: block;
+    justify-items: center;
+    padding: 0 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#img-pokemon {
+    height: 100%;
+    object-fit: cover;
+}
+
+.atributos,
+.habilidades,
+.status {
+    display: block;
+    text-align: start;
+    padding: 10px 10px;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.status {
+    display: grid;
+    justify-content: center;
+    padding: 10px 0 10px;
+    grid-template-columns: repeat(6, max-content);
+    grid-template-rows: 1fr 1fr;
+    /* grid-template-areas:
+    "HP ATK DEF SPDEF SPATK SPD"
+    "hp atk def spdef spatk spd"; */
+    width: 100%;
+    column-gap: 5px;
+}
+
+.status p {
+    margin-left: 10px;
+    width: fit-content;
+}
+
+.status span {
+    padding: 0 2px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(0, 0, 255, 0.1);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.HP, .ATK, .DEF, .SP_DEF, .SP_ATK, .SPD {
+    border-radius: 4px 4px 0 0;
+}
+
+#hp, #atk, #def, #sp_def, #sp_atk, #spd {
+    border-top: 1px solid rgba(65, 105, 225, 0.3);
+    border-radius: 0 0 4px 4px;
+}
+
+
+.descricao {
+    background-color: transparent;
+    margin-top: -21px;
+    background: white;
+    width: fit-content;
+    position: absolute;
+    z-index: 1;
+}
+
+#peso::before {
+    content: "Peso";
+    margin-right: auto;
+}
+#peso {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px 6px 0 0;
+}
+
+#altura::before {
+    content: "Altura";
+}
+#altura {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 6px 6px;
+}
+
+.atributos p:not(:nth-child(1)) {
+    padding: 0 4px;
+    margin-bottom: 2px;
+    background-color: rgba(0, 0, 255, 0.1);
+    text-transform: capitalize;
+}
+
+.habilidades p:not(:nth-child(1)) {
+    padding: 0 4px;
+    margin-bottom: 2px;
+    background-color: rgba(0, 0, 255, 0.1);
+    text-transform: capitalize;
+}
+.hld-1{
+    border-radius: 6px 6px 0 0;
+}
+.hld-3 {
+    border-radius: 0 0 6px 6px;
+}
+
+/* Tela de Pokémon Desconhecido */
+#pokemon-desconhecido {
+    width: 400px;
+    height: 299px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: auto;
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    
+    /* animation: tremerTela 0.1s ease; */
+}
+
+#pokemon-desconhecido > p {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: gold;
+    margin-bottom: -38px;
+    position: relative;
+    z-index: 0;
+    text-shadow: 
+    -2px -2px 0 royalblue, 
+     2px -2px 0 royalblue, 
+    -2px  2px 0 royalblue, 
+     2px  2px 0 royalblue;
+}
+
+#pokemon-desconhecido>img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+/*  Rodapé do site
+*/
+footer {
+    background-color:rgb(62, 255, 133);
+    border-top: 10px groove rgba(46, 189, 98, 0.593);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 20px 30px;
+    background-image: url("./imgs/grama-wallpaper.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+footer img {
+    object-fit: cover;
+    object-position: center;
+    width: fit-content;
+    height: 150px;
+    margin-top: -88px;
+}
+
+
+/*  Animação tremer a Tela:
+*/
+@keyframes tremerTela {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+    100% {
+        transform: translateX(-4px);
+    }
+}
+
+
+
+/*  Tipos de Pokémons
+*/
+
+.normal {background: #A8A77A;}
+
+.fighting {background: #C22E28;}
+
+.flying {background: #A98FF3;}
+
+.poison {background: #A33EA1;}
+
+.ground {background: #E2BF65;}
+
+.rock {background: #B6A136;}
+
+.bug {background: #A6B91A;}
+
+.ghost {background: #735797;}
+
+.steel {background: #B7B7CE;}
+
+.fire {background: #EE8130;}
+
+.water {background: #6390F0;}
+
+.grass {background: #7AC74C;}
+
+.electric {background: #F7D02C;}
+
+.psychic {background: #F95587;}
+
+.ice {background: #96D9D6;}
+
+.dragon {background: #6F35FC;}
+
+.dark {background: #705746;}
+
+.fairy {background: #D685AD;}
+
+.stellar {background: #B794F4;}
