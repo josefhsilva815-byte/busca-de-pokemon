@@ -37,13 +37,13 @@ https://pokeapi.co/
 
 Endpoint utilizado:
 
-```http
+```
 https://pokeapi.co/api/v2/pokemon/{nome-do-pokemon}
 ```
 
 Exemplo:
 
-```http
+```
 https://pokeapi.co/api/v2/pokemon/pikachu
 ```
 
@@ -78,8 +78,8 @@ Busca-de-Pokemon/
 │
 ├── assets/
 │   └── imagens
-├── home.html
-├── index.css
+├── index.html
+├── style.css
 ├── main.js
 └── README.md
 ```
@@ -88,7 +88,7 @@ Busca-de-Pokemon/
 
 Acesse o link do repositório:
 ```
-https://github.com/josefhsilva815-byte/busca-de-pokemon.git
+https://josefhsilva815-byte.github.io/busca-de-pokemon/
 ```
 
 `
@@ -107,7 +107,7 @@ git clone https://github.com/josefhsilva815-byte/busca-de-pokemon.git
 cd busca-de-pokemon
 ```
 
-3. Abra o arquivo `home.html` em seu navegador.
+3. Abra o arquivo `index.html` em seu navegador.
 
 Ou utilize uma extensão como **Live Server** para uma melhor experiência de desenvolvimento.
 
